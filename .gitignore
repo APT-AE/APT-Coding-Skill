@@ -1,0 +1,41 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor temp files
+*.swp
+*.swo
+*~
+*.tmp
+
+# Dev backup files (不会进发布版)
+*.bak
+*.demobak
+*.orig
+
+# Release copy (临时构建的加密版，不提交)
+*-release/
+
+# Project files (不要混进 skill 仓库——这是客户工程目录，和 skill 本身无关)
+Porting/
+case*/
+demo*/
+Project/
+Obj/
+Lst/
+Output/
+*.elf
+*.ihex
+*.hex
+*.bin
+*.o
+*.d
+.map
+.cdkproj
+.cdkws
+*.mk
+*.bat
+__workspace_pack__/
+.cache/
+.cdk/
