@@ -35,14 +35,13 @@ echo BUILD_EXITCODE=%errorlevel%
 ```
 用 `rebuild` 确保 clean + 全量编译(增量缓存会骗人)。
 
-## 路径探测(先自己找，找不到再问客户)
+## 路径探测(只问一次，存进度文件复用)
 
-**不要一上来就让客户填路径**(客户大概率不知道"CDK 装哪了")。按下面的顺序自己找：
+**先查 `PORTING_PROGRESS.md`**：如果已记录 CDK 路径，直接复用，不再问。
 
-1. **搜 `cdk-make.exe`**：在 C/D/E 盘根目录搜 `cdk-make.exe`(限制深度避免太慢)。找到的目录就是 `<CDK根>\CDK\`。
-2. **找不到就搜 `csky-elfabiv2-gcc.exe`**：同样的方式，找到后在它的 `bin` 目录往上一级就是工具链根。
-3. **两个都找不到** → 才问客户："CDK 装在哪个盘?还记得大概路径吗?"(给提示:通常是 `D:\C-Sky` 或 `C:\C-Sky`)。
-4. **找到后验证**：确认 `<CDK根>\CDK\cdk-make.exe` 和 `<CDK根>\CDKRepo\Toolchain\CKV2ElfMinilib\...\bin\csky-elfabiv2-gcc.exe` 都存在，记录下实际路径供后续编译用。
+**没有缓存时，直接问客户一次**："CDK 装在哪个目录？"(通常是 `D:\C-Sky` 或 `C:\C-Sky`)。
+
+得到路径后验证：确认 `<路径>\CDK\cdk-make.exe` 存在。**验证通过后写入 `PORTING_PROGRESS.md` 的关键上下文**。后续所有会话从进度文件读，永不重问。
 
 参考值(实测，版本可能不同)：
 - cdk-make：`<CDK根>\CDK\cdk-make.exe`
