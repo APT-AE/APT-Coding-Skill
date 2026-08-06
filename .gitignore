@@ -17,6 +17,9 @@ Desktop.ini
 # Release copy (临时构建的加密版，不提交)
 *-release/
 
+# Internal docs (本地保留，不同步到公开仓库)
+CHANGELOG.md
+
 # Project files (不要混进 skill 仓库——这是客户工程目录，和 skill 本身无关)
 Porting/
 case*/

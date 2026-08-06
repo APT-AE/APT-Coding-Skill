@@ -11,15 +11,14 @@
 
 其中RCR和MPM功能介绍如下：
 
-1. 连续周期事件计数RCR功能如下：
+1. 连续周期事件计数RCR功能举例：RCR[RPRD]=3时，一次事件产生一个TRGOUT触发信号；产生（3+1）个TRGOUT触发信号后，停止该计数
 
-
-
-2. 连续计数MPM功能如下：
-
+2. 连续计数MPM功能举例：当EVPS[TRGEV0PRD]=0时，MPM模式等效于OPM；
+EVPS[TRGEV0PRD]=3时，产生（3+1）次事件会产生一个TRGOUT触发信号，并停止该计数
 注意：MPM功能仅支持TRGEV0通道。
 
-3. 连续计数EVPS功能如下：
+3. 连续计数EVPS功能举例：EVPS[TRGEV0PRD]=2时，产生（2+1）次事件会产生一个TRGOUT触发信号
+
 
 
 

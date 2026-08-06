@@ -486,7 +486,7 @@ code {
     <div class="signal-dot c"></div>
 
     <div class="slide-title">
-        <p class="mono-label reveal">/// EMBEDDED_AI_TOOLKIT &nbsp;·&nbsp; v0.1.0</p>
+        <p class="mono-label reveal">/// EMBEDDED_AI_TOOLKIT &nbsp;·&nbsp; v0.2.0</p>
         <div class="accent-line title-accent reveal"></div>
         <h1 class="reveal"><em>APT</em>&nbsp;Coding Skill</h1>
         <p class="subtitle reveal">AI 驱动的芯片开发技能包</p>
@@ -496,7 +496,7 @@ code {
         </p>
     </div>
     <div class="corner-bl reveal" style="position:absolute;bottom:50px;left:110px;z-index:10;font-family:var(--font-mono);font-size:12px;color:var(--text-muted);letter-spacing:3px;">● APT Chip · Conference 2026</div>
-    <div class="corner-br-badge reveal" style="position:absolute;bottom:50px;right:110px;z-index:10;font-family:var(--font-mono);font-size:13px;color:var(--copper);padding:7px 16px;border:1px solid var(--copper-dim);letter-spacing:3px;">V0.1</div>
+    <div class="corner-br-badge reveal" style="position:absolute;bottom:50px;right:110px;z-index:10;font-family:var(--font-mono);font-size:13px;color:var(--copper);padding:7px 16px;border:1px solid var(--copper-dim);letter-spacing:3px;">V0.2</div>
 
 </section>
 
@@ -778,7 +778,7 @@ code {
 
         <div class="two-col reveal">
             <div class="tool-card">
-                <h4>&#9312; CDK 开发环境</h4>
+                <h4 style="color:var(--warning);">&#9312; CDK 开发环境（必需）</h4>
                 <p class="tool-sub">编译下载调试用</p>
                 <p style="font-family:var(--font-display);font-weight:300;font-size:17px;color:var(--text-secondary);line-height:1.7;">
                     包含调试器
@@ -792,7 +792,7 @@ code {
                 </p>           
             </div>
 			<div class="tool-card">
-                <h4>&#9313; APT芯片对应的demo工程代码</h4>
+                <h4 style="color:var(--warning);">&#9313; APT芯片对应的demo工程代码（必需）</h4>
                 <p class="tool-sub">目标工程</p>
                 <p style="font-family:var(--font-display);font-weight:300;font-size:17px;color:var(--text-secondary);line-height:1.7;">
                     AI会基于这个工程，逐步搭建起目标工程
@@ -826,9 +826,9 @@ code {
     <div style="display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--trace);padding:8px 14px;"><span style="font-family:var(--font-mono);font-size:14px;color:var(--copper);">/apt-coding</span><span style="width:7px;height:18px;background:var(--copper);animation:blink 1s step-end infinite;"></span></div>
   </div>
   <div class="reveal" style="text-align:center;margin-top:40px;padding-top:20px;border-top:1px solid var(--trace);max-width:800px;">
-    <p style="font-family:var(--font-display);font-size:17px;color:var(--text-primary);margin:40px;">然后用自然语言提出需求，如;</p>
-    <p style="font-family:var(--font-display);font-size:14px;color:var(--warning);margin:24px 0 0 0;"><b>⚠️ AI 也会犯错。</b> 发现它跳过步骤、编造参数、或指引不合理时——请及时纠正它。</p>
-    <p style="font-family:var(--font-display);font-size:15px;color:var(--copper);margin:6px 0 0 0;"><em>&ldquo;把这个项目从旧芯片改到 APT32F104，旧代码路径 xxx，104 demo 路径 xxx&rdquo;</em></p>
+    <p style="font-family:var(--font-display);font-size:17px;color:var(--text-primary);margin:40px;">建议每次都用 <code style="background:var(--surface-raised);padding:2px 6px;border-radius:4px;">/apt-coding</code> 开头，确保完整激活：</p>
+    
+    <p style="font-family:var(--font-display);font-size:15px;color:var(--copper);margin:6px 0 0 0;"><em>/apt-coding &ldquo;把这个项目从旧芯片改到 APT32F104，旧代码路径 xxx，104 demo 路径 xxx&rdquo;</em></p><p style="font-family:var(--font-display);font-size:12px;color:var(--text-secondary);margin:16px 0 0 0;">不加 /apt-coding 只当参考翻翻，加了才按流程一步步验证</p>
   </div>
 </div>
 </section>
@@ -1284,6 +1284,8 @@ code {
      SLIDE 1 — TITLE
      =========================================== -->
 </main><!-- /.deck-stage -->
+
+<div style="text-align:center;max-width:800px;margin:20px auto;padding:12px;border:1px solid var(--warning);border-radius:6px;"><p style="font-family:var(--font-display);font-size:14px;color:var(--warning);margin:0;"><b>⚠️ AI 也会犯错。</b> 发现它跳过步骤、编造参数、或指引不合理时——请及时纠正它。</p></div>
 </div><!-- /.deck-viewport -->
 
 <script>
